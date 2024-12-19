@@ -1,167 +1,153 @@
-git clone https://github.com/ваш_пользователь/student-services-site.git
-git add .
-git commit -m "Initial commit"
-git push origin main
-### План разработки сайта для студентов
-
----
-
-#### 1. **Подготовительный этап**
-
-**Выбор технологии:**
-
-- Для фронтенда используйте HTML, CSS и JavaScript.
-- Для бэкенда выберите PHP или Node.js в зависимости от опыта и предпочтений.
-
-**Подготовка контента:**
-
-- Определите точный текст для следующих разделов:
-  - Главная страница: краткое описание услуг.
-  - Раздел с услугами: описание сроков выполнения, примеров тем и цен.
-  - Раздел с курсами: названия и описания курсов.
-  - Контактная информация: email, телефон, ссылки на мессенджеры.
-  - Личный кабинет: тексты для сообщений пользователю.
-
----
-
-#### 2. **Разработка сайта**
-
-##### **Главная страница:**
-
-- Создайте заголовок и краткое описание услуг.
-- Добавьте кнопки для перехода к разделам: услуги, курсы, контакты.
-
-##### **Раздел с услугами:**
-
-- Создайте таблицы или карточки с описанием:
-  - Сроков выполнения.
-  - Примеров тем.
-  - Цен.
-
-##### **Раздел с курсами:**
-
-- Список курсов с кратким описанием:
-  - Основы маркетинга.
-  - Работа с соцсетями.
-  - Продвижение бренда.
-- Добавьте кнопки "Купить курс" с интеграцией платежной системы (оплата на карту украинского банка).
-
-##### **Контакты:**
-
-- Создайте форму обратной связи с полями:
-  - Имя.
-  - Email.
-  - Сообщение.
-- Укажите контакты: телефон, email, ссылки на мессенджеры.
-
-##### **Личный кабинет:**
-
-- Реализуйте регистрацию и авторизацию пользователей.
-- Добавьте возможность загружать готовые курсы или выполненные заказы для клиентов.
-
----
-
-#### 3. **Тестирование**
-
-- Проверьте функциональность всех разделов, включая навигацию.
-- Убедитесь в корректной работе платёжной системы.
-- Оптимизируйте дизайн и верстку для мобильных устройств.
-- Проверьте корректность загрузки файлов в личном кабинете.
-
----
-
-#### 4. **Запуск сайта**
-
-- Разместите сайт на выбранном хостинге.
-- Проверьте доступность домена и корректность работы всех функций.
-- Продвигайте сайт среди студентов через социальные сети и тематические группы.
-
----
-
-#### Пример HTML/CSS/JS кода
-
-```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Допомога студентам</title>
+    <title>Допомога студентам | Головна</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Професійна допомога з навчанням та маркетингом</h1>
-        <nav>
-            <ul>
-                <li><a href="#services">Послуги</a></li>
-                <li><a href="#courses">Курси</a></li>
-                <li><a href="#contacts">Контакти</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="/">StudyHelper</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="#courses">Курси</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                    <li><a href="#login" class="btn-login">Увійти</a></li>
+                </ul>
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="services">
-            <h2>Наші послуги</h2>
-            <table>
-                <tr>
-                    <th>Тип роботи</th>
-                    <th>Терміни виконання</th>
-                    <th>Ціна</th>
-                </tr>
-                <tr>
-                    <td>Курсова робота</td>
-                    <td>3-5 днів</td>
-                    <td>1500 грн</td>
-                </tr>
-                <tr>
-                    <td>Дипломна робота</td>
-                    <td>7-10 днів</td>
-                    <td>5000 грн</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="courses">
-            <h2>Курси з маркетингу</h2>
-            <div class="course">
-                <h3>Основи маркетингу</h3>
-                <p>Дізнайтеся базові принципи маркетингу.</p>
-                <button>Купити курс</button>
-            </div>
-            <div class="course">
-                <h3>Робота з соцмережами</h3>
-                <p>Як ефективно просувати бізнес у соцмережах.</p>
-                <button>Купити курс</button>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Професійна допомога студентам</h1>
+                <p>Ваш надійний помічник у навчанні та розвитку</p>
+                <a href="#services" class="btn-primary">Дізнатися більше</a>
             </div>
         </section>
 
-        <section id="contacts">
-            <h2>Контакти</h2>
-            <form action="send.php" method="POST">
-                <label for="name">Ім'я:</label>
-                <input type="text" id="name" name="name" required>
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Наші послуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Курсові роботи</h3>
+                        <p>Термін: 3-5 днів</p>
+                        <p class="price">від 1500 грн</p>
+                        <a href="#" class="btn-secondary">Замовити</a>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Дипломні роботи</h3>
+                        <p>Термін: 7-10 днів</p>
+                        <p class="price">від 5000 грн</p>
+                        <a href="#" class="btn-secondary">Замовити</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+        <!-- Courses Section -->
+        <section id="courses" class="courses">
+            <div class="container">
+                <h2>Курси з маркетингу</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="marketing-basics.jpg" alt="Основи маркетингу">
+                        </div>
+                        <div class="course-content">
+                            <h3>Основи маркетингу</h3>
+                            <p>Базові принципи сучасного маркетингу</p>
+                            <div class="course-footer">
+                                <span class="price">2000 грн</span>
+                                <a href="#" class="btn-primary">Купити курс</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="social-media.jpg" alt="Соціальні мережі">
+                        </div>
+                        <div class="course-content">
+                            <h3>Робота з соцмережами</h3>
+                            <p>Просування бізнесу в соціальних мережах</p>
+                            <div class="course-footer">
+                                <span class="price">2500 грн</span>
+                                <a href="#" class="btn-primary">Купити курс</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <label for="message">Повідомлення:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Відправити</button>
-            </form>
-            <p>Телефон: +380123456789</p>
-            <p>Email: info@example.com</p>
+        <!-- Contact Section -->
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2>Зв'яжіться з нами</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+380123456789</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@example.com</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-viber"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ім'я</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Повідомлення</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Надіслати</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Допомога студентам</p>
-    </footer>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
-```
-
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>StudyHelper</h3>
+                    <p>Ваш надійний помічник у навчанні</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Швидкі посилання</h4>
+                    <ul>
+                        <li><a href="#services">Послуги</a></li>
+                        <li><a href="#courses">Курси</a></li>
+                        <li>
